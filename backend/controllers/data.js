@@ -4,9 +4,9 @@ const ProductsNature = require("../models/products");
 const data = {
   rutas: async (req, res, next) => {
     try {
-      const products = await ProductsNature.find({});
+      const rutas = await ProductsNature.find({});
       console.log(ProductsNature);
-      res.json(products).status(200);
+      res.json(rutas).status(200);
     } catch (error) {
       console.log(error);
       next();
