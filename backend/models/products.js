@@ -53,5 +53,5 @@ const productSchema = new Schema({
 });
 
 
-const ProductsNature = mongoose.model("productsnatures", productSchema)
+const ProductsNature = mongoose.model("rutas", productSchema)
 module.exports = ProductsNature

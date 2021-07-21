@@ -2,13 +2,9 @@ const router = require('express').Router()
 const data = require('../controllers/data');
 
 
-router.get('/api/consultabbdd', data.search)
+router.get('/api/rutas', data.rutas)
+router.get('/api/actividades', data.actividades)
+router.get('/api/transportes', data.transportes)
 
 module.exports = router
 
-//localhost:5000?name=david
-
-//req.query.name
-// /api/:name
-// localhost:5000/api/david
-//req.params.name

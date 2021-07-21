@@ -1,7 +1,8 @@
 const ProductsNature = require("../models/products");
 
+
 const data = {
-  search: async (req, res, next) => {
+  rutas: async (req, res, next) => {
     try {
       const products = await ProductsNature.find({});
       console.log(ProductsNature);
@@ -11,5 +12,12 @@ const data = {
       next();
     }
   },
+  actividades: (req, res, next) => {
+    res.send('Esta es actividades')
+  },
+  transportes: (req, res, next) => {
+    res.send('Esta es transportes')
+  },
+
 };
 module.exports = data;
