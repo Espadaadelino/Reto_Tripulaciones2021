@@ -2,56 +2,42 @@ const mongoose = require("mongoose")
 const Schema = mongoose.Schema
 
 const autoIncrement = require('mongoose-auto-increment')
-let connection = mongoose.createConnection(process.env.MONGO_DATABASE_URL, { useNewUrlParser: true })
+let connection = mongoose.createConnection(process.env.MONGODB_URI, { useNewUrlParser: true })
 autoIncrement.initialize(connection)
 
 const productSchema = new Schema({
   
-  title: {
-    type: String,
+  actividad: {
+    type: Object,
     required: true,
     unique: true,
   },
-  description: {
-    type: String,
+  categoria: {
+    type: Object,
     required: true,
     
   },
-  rating: {
-    type: Number,
+  descripcion: {
+    type: Object,
     required: true,
     
   },
-  price: {
-    type: Number,
+  latitud: {
+    type: Object,
     required: true,
   },
-  image: {
-    type: String,
-    validate: {
-        validator: function(text) {
-            return text.indexOf('https://') === 0;
-        },
-        message: 'la URL de la imagen debe empezar por https://'
-    }
+  longitud: {
+    type: Object,
+    Required:true 
   },
-  marker:{
-    name: {
-      type: String,
-      required: true,
-    },
-    ciff: {
-      type: String,
-      required: true,
-    },
-    adress: {
-      type: String,
-      required: true,
-    },
+  web:{
+    type: Object,
+    Required:true
+   
   }
   
 });
 
 
-const ProductsNature = mongoose.model("rutas", productSchema)
-module.exports = ProductsNature
+const RetoTripulaciones = mongoose.model("actividades", productSchema)
+module.exports = RetoTripulaciones

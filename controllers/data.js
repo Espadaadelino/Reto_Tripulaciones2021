@@ -1,19 +1,26 @@
-const ProductsNature = require("../models/products");
+const RetoTripulaciones = require("../models/products");
 
 
 const data = {
   rutas: async (req, res, next) => {
     try {
-      const rutas = await ProductsNature.find({});
-      console.log(ProductsNature);
+      const rutas = await RetoTripulaciones.find({});
+      console.log(RetoTripulaciones);
       res.json(rutas).status(200);
     } catch (error) {
       console.log(error);
       next();
     }
   },
-  actividades: (req, res, next) => {
-    res.send('Esta es actividades')
+  actividades: async (req, res, next) => {
+    try {
+      const actividades = await RetoTripulaciones.find({});
+      console.log(RetoTripulaciones);
+      res.json(actividades).status(200);
+    } catch (error) {
+      console.log(error);
+      next();
+    }
   },
   transportes: (req, res, next) => {
     res.send('Esta es transportes')
