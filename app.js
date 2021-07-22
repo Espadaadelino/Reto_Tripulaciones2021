@@ -1,8 +1,11 @@
 require("dotenv").config();
 require('./utils/db')
+
 const express = require('express')
 const router =require('./routes/routes')
 const app = express()
+/* aqui cors */
+const cors = require('cors')
 const port = process.env.PORT || 4000
 app.get('/', (req, res) => {
   res.send('Esta es la Home')
@@ -12,6 +15,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
 app.use('/',router)
+app.use(cors())
 
 
 app.listen(process.env.PORT, () => {

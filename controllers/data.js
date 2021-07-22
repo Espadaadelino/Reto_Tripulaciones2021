@@ -1,11 +1,13 @@
-const RetoTripulaciones = require("../models/products");
+const Rutas = require("../models/rutas");
+const Actividades = require("../models/actividades");
+const Transportes = require("../models/transportes");
 
 
 const data = {
   rutas: async (req, res, next) => {
     try {
-      const rutas = await RetoTripulaciones.find({});
-      console.log(RetoTripulaciones);
+      const rutas = await Rutas.find({});
+      /* console.log(rutas); */
       res.json(rutas).status(200);
     } catch (error) {
       console.log(error);
@@ -14,16 +16,23 @@ const data = {
   },
   actividades: async (req, res, next) => {
     try {
-      const actividades = await RetoTripulaciones.find({});
-      console.log(RetoTripulaciones);
+      const actividades = await Actividades.find({});
+      /* console.log(actividades); */
       res.json(actividades).status(200);
     } catch (error) {
       console.log(error);
       next();
     }
   },
-  transportes: (req, res, next) => {
-    res.send('Esta es transportes')
+  transportes: async (req, res, next) => {
+    try {
+      const transportes = await Transportes.find({});
+      /* console.log(transportes); */
+      res.json(transportes).status(200);
+    } catch (error) {
+      console.log(error);
+      next();
+    }
   },
 
 };
