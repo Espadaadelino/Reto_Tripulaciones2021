@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Map, TileLayer } from "react-leaflet";
 import Routing from "./RoutingMachine";
+import '../Maps/LeafletMap.css'
 
 export default class LeafletMap extends Component {
   state = {
@@ -19,7 +20,7 @@ export default class LeafletMap extends Component {
   render() {
     const position = [this.state.lat, this.state.lng];
     return (
-
+        
       
       <Map center={position} zoom={this.state.zoom} ref={this.saveMap}>
         
