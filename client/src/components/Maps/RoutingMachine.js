@@ -3,7 +3,10 @@ import L from "leaflet";
 import "leaflet-routing-machine";
 import {withLeaflet} from "react-leaflet";
 
+
 class Routing extends MapLayer {
+
+
     createLeafletElement() {
         const {map} = this.props;
         let leafletElement = L.Routing.control({
@@ -12,8 +15,15 @@ class Routing extends MapLayer {
                 L.latLng(40.3966428, -3.6822935),
                 L.latLng(40.4146500, -3.7004000)
             ],
-            language: 'es'
+            language: 'es',
+
+            show: false,
+            collapsible: true
+
+
         }).addTo(map.leafletElement);
+
+
         return leafletElement.getPlan();
     }
 }
