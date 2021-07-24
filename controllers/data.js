@@ -3,6 +3,7 @@ const Actividades = require("../models/actividades");
 const Transportes = require("../models/transportes");
 
 
+
 const data = {
   rutas: async (req, res, next) => {
     try {
@@ -34,6 +35,16 @@ const data = {
       next();
     }
   },
+  products:async (req, res, next) => {
+    try {
+      const products = await ProductsNature.find({});
+      /* console.log(transportes); */ 
+      res.json(products).status(200);
+    } catch (error) {
+      console.log(error);
+      next();
+    }
+  }
 
 };
 module.exports = data;
