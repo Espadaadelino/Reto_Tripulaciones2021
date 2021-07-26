@@ -5,7 +5,7 @@ import { withLeaflet } from "react-leaflet";
 /* import axios from "axios"; */
 
 /* const getRoute = async (latitud,longitud) =>
-  await axios.get(`/api/rutas/${latitud},${longitud}`); */
+  await axios.get(`/api/rutas/?=${latitud}?=${longitud}`); */
 
 class Routing extends MapLayer {
   createLeafletElement() {

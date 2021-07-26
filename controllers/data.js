@@ -1,6 +1,7 @@
 const Rutas = require("../models/rutas");
 const Actividades = require("../models/actividades");
 const Transportes = require("../models/transportes");
+const Obstaculos = require("../models/obstaculos");
 
 
 
@@ -8,8 +9,9 @@ const data = {
   rutas: async (req, res, next) => {
     try {
       const rutas = await Rutas.find({});
-      /* console.log(rutas); */
-      res.json(rutas).status(200);
+      res.json(rutas.longitud).status(200);
+      /* res.json(rutas.longitud).status(200); */
+      /* console.log(rutas.longitud); */
     } catch (error) {
       console.log(error);
       next();
@@ -35,11 +37,12 @@ const data = {
       next();
     }
   },
-  products:async (req, res, next) => {
+  
+  obstaculos: async (req, res, next) => {
     try {
-      const products = await ProductsNature.find({});
+      const obstaculos = await Obstaculos.find({});
       /* console.log(transportes); */ 
-      res.json(products).status(200);
+      res.json(obstaculos).status(200);
     } catch (error) {
       console.log(error);
       next();
