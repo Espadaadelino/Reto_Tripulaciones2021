@@ -1,3 +1,4 @@
+
 import React, {Component} from "react";
 import {Map, TileLayer} from "react-leaflet";
 import Routing from "./RoutingMachine";
@@ -25,7 +26,9 @@ export default class LeafletMap extends Component {
                 this.saveMap
         }>
 
-            <TileLayer attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors' url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"/> {
+            <TileLayer attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors' url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"/> 
+            {
+
             this.state.isMapInit && <Routing map={
                 this.map
             }/>
@@ -33,13 +36,14 @@ export default class LeafletMap extends Component {
 
             <Search position="topleft" inputPlaceholder="Search your location"
                 onChange={
-                    (info) => { // setCoordinates(info.latLng);
+                    (info) => { // setCoordinates(info.latLng);/* axios fetch */
                     }
                 }
                 showMarker={false}
                 //zoom={5}
                 closeResultsOnClick={true}
                 openSearchOnLoad={true}></Search>
-    </Map>);
-    }
-}
+    </Map>
+    );
+    };
+};

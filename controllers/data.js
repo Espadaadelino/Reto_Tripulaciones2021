@@ -3,15 +3,45 @@ const Actividades = require("../models/actividades");
 const Transportes = require("../models/transportes");
 const Obstaculos = require("../models/obstaculos");
 
-
-
 const data = {
   rutas: async (req, res, next) => {
     try {
       const rutas = await Rutas.find({});
-      res.json(rutas.longitud).status(200);
-      /* res.json(rutas.longitud).status(200); */
-      /* console.log(rutas.longitud); */
+      console.log(rutas[0].latitud);
+      const latitudes =[]
+      const longitudes=[]
+      const calles = []
+      const rutasLatitud = rutas[0].latitud;
+      for (const property in rutasLatitud) {
+        latitudes.push(rutasLatitud[property])
+        /* console.log(rutasLatitud[property]); */
+      }
+      const rutasLongitud = rutas[0].longitud;
+      for (const property in rutasLongitud) {
+        longitudes.push(rutasLongitud[property])
+        /* console.log(rutasLongitud[property]); */
+      }
+      const rutasCalle = rutas[0].calle;
+      for (const property in rutasCalle) {
+        calles.push(rutasCalle[property])
+        /* console.log(rutasCalle[property]); */
+      }
+      const rutaFinal = latitudes.map((element, index) => {
+        /* console.log(element, longitudes[index], calles[index],index) */
+        return {
+          coor:[element, longitudes[index]], 
+          street: calles[index]
+        }
+        
+      })
+      const response = {rutaFinal}
+      console.log(response)
+      
+      
+
+      
+      res.json(response).status(200);
+
     } catch (error) {
       console.log(error);
       next();
@@ -37,17 +67,16 @@ const data = {
       next();
     }
   },
-  
+
   obstaculos: async (req, res, next) => {
     try {
       const obstaculos = await Obstaculos.find({});
-      /* console.log(transportes); */ 
+      /* console.log(transportes); */
       res.json(obstaculos).status(200);
     } catch (error) {
       console.log(error);
       next();
     }
-  }
-
+  },
 };
 module.exports = data;
