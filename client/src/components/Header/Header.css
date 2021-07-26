@@ -1,0 +1,9 @@
+html{
+    background-image: url("../../img/parque.jpg");
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    background-size:contain;
+    margin: 0;
+    
+}
+
