@@ -10,7 +10,7 @@ router.get('/api/actividades', data.actividades)
 /* por si se puede recuperar con el id todos los objetos */
 /* router.get('/api/actividades:id', data.actividades) */
 
-router.get('/api/transportes:', data.transportes)
+router.get('/api/transportes', data.transportes)
 /* por si se puede recuperar con el id todos los objetos */
 /* router.get('/api/transportes:id', data.transportes) */
 

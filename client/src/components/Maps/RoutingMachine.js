@@ -9,17 +9,17 @@ class Routing extends MapLayer {
   /* almacenar respuesta en el componente routing  con this.state*/
   /*  en vez de localizar la ruta a traves el input value hacerlo a traves del link de rutas en el componente Footer y que ya pinte la ruta directamente*/
   /* ruta del Arco del Triunfo a la playa de la Barceloneta */
-  constructor() {
+/*   constructor() {
     super();
     this.state = {
       response: [],
     };
-  }
-  getRoutes = async (res) => {
+  } */
+  getRoutes = async () => {
     await axios.get("/api/rutas")
-    .then((res) => res.json());
-    console.log(res)
-    .then((res) => this.state.response);
+    /* .then((res) => res.json()); */ /* axios ya por defecto pasa la petición a json */
+    .then((res) => console.log(res) );
+    
   };
 
   createLeafletElement() {
