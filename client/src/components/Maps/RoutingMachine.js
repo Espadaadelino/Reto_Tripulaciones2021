@@ -15,21 +15,15 @@ class Routing extends MapLayer {
       response: [],
     };
   } */
-  getRoutes = async () => {
-    await axios.get("/api/rutas")
-    /* .then((res) => res.json()); */ /* axios ya por defecto pasa la petición a json */
-    .then((res) => console.log(res) );
-    
-  };
 
-  createLeafletElement() {
+
+  
+
+  createLeafletElement(waypoints) {
     const { map } = this.props;
+    
     let leafletElement = L.Routing.control({
-      waypoints: [
-        L.latLng(40.420625, -3.692291)
-      
-      
-      ],
+      waypoints: waypoints,
       language: "es",
 
       show: false,
@@ -38,5 +32,18 @@ class Routing extends MapLayer {
 
     return leafletElement.getPlan();
   }
+  componentDidMount (){
+    
+    axios.get("http://localhost:5000/api/rutas")
+   /* .then((res) => res.json()); */ /* axios ya por defecto pasa la petición a json */
+   .then((res) => {
+     console.log(res.data.rutaFinal)
+     this.createLeafletElement(res.data.rutaFinal.map((waypoint)=>L.latLng(waypoint.coor)))
+
+   } );
+   
+ 
+
+}
 }
 export default withLeaflet(Routing);
