@@ -1,9 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-import {makeStyles} from '@material-ui/core/styles';
-=======
-/* import { makeStyles } from '@material-ui/core/styles'; */
->>>>>>> f9cac749ba9982377537aab17ebabcdd6ef469f2
+/* import {makeStyles} from '@material-ui/core/styles'; */
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import RestoreIcon from '@material-ui/icons/Restore';
@@ -13,20 +9,12 @@ import ExploreOutlinedIcon from '@material-ui/icons/ExploreOutlined';
 import {Link} from 'react-router-dom';
 import './footer.css'
 
-<<<<<<< HEAD
-const useStyles = makeStyles({
+/* const useStyles = makeStyles({
     root: {
         width: 500
     }
 });
-=======
-/* const useStyles = makeStyles({
-  root: {
-    width: 500,
-  },
-}); */
->>>>>>> f9cac749ba9982377537aab17ebabcdd6ef469f2
-
+ */
 export default function SimpleBottomNavigation() { // const classes = useStyles();
     const [value, setValue] = React.useState(0);
 
