@@ -34,7 +34,7 @@ const data = {
         };
       });
       const response = { rutaFinal };
-      console.log(response);
+      /* console.log(response); */
 
       res.json(response).status(200);
     } catch (error) {
@@ -94,7 +94,7 @@ const data = {
         };
       });
       const response = { actividadesFinal };
-      console.log(response);
+      /* console.log(response); */
 
       res.json(actividades).status(200);
     } catch (error) {
@@ -134,7 +134,7 @@ const data = {
         };
       });
       const response = { transportesFinal };
-      console.log(response);
+      /* console.log(response); */
       res.json(transportes).status(200);
     } catch (error) {
       console.log(error);
@@ -182,7 +182,7 @@ const data = {
         };
       });
       const response = { obstaculosFinal };
-      console.log(response);
+      /* console.log(response); */
       /* console.log(transportes); */
       res.json(obstaculos).status(200);
     } catch (error) {
