@@ -1,30 +1,49 @@
-import {MapLayer} from "react-leaflet";
+import { MapLayer } from "react-leaflet";
 import L from "leaflet";
 import "leaflet-routing-machine";
-import {withLeaflet} from "react-leaflet";
-
+import { withLeaflet } from "react-leaflet";
+import axios from "axios";
 
 class Routing extends MapLayer {
+  /* hacer fetch axios get a http://localhost:5000/api/rutas */
+  /* almacenar respuesta en el componente routing  con this.state*/
+  /*  en vez de localizar la ruta a traves el input value hacerlo a traves del link de rutas en el componente Footer y que ya pinte la ruta directamente*/
+  /* ruta del Arco del Triunfo a la playa de la Barceloneta */
+/*   constructor() {
+    super();
+    this.state = {
+      response: [],
+    };
+  } */
 
 
-    createLeafletElement() {
-        const {map} = this.props;
-        let leafletElement = L.Routing.control({
-            waypoints: [
-                L.latLng(40.420625, -3.692291),
-                L.latLng(40.3966428, -3.6822935),
-                L.latLng(40.4146500, -3.7004000)
-            ],
-            language: 'es',
+  
 
-            show: false,
-            collapsible: true
+  createLeafletElement(waypoints) {
+    const { map } = this.props;
+    
+    let leafletElement = L.Routing.control({
+      waypoints: waypoints,
+      language: "es",
 
+      show: false,
+      collapsible: true,
+    }).addTo(map.leafletElement);
 
-        }).addTo(map.leafletElement);
+    return leafletElement.getPlan();
+  }
+  componentDidMount (){
+    
+    axios.get("http://localhost:5000/api/rutas")
+   /* .then((res) => res.json()); */ /* axios ya por defecto pasa la petición a json */
+   .then((res) => {
+     console.log(res.data.rutaFinal)
+     this.createLeafletElement(res.data.rutaFinal.map((waypoint)=>L.latLng(waypoint.coor)))
 
+   } );
+   
+ 
 
-        return leafletElement.getPlan();
-    }
+}
 }
 export default withLeaflet(Routing);

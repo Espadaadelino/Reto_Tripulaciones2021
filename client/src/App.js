@@ -1,10 +1,10 @@
 import React from "react";
 import {BrowserRouter} from 'react-router-dom'
-// import Grid from '@material-ui/core/Grid';
+/* import Grid from '@material-ui/core/Grid'; */
 import Main from './components/Main/Main'
 import Footer from "./components/Footer/footer"
-import Header from "./components/Header/Header"
-// import LeafletMap from "./components/Maps/LeafletMap";
+/* import Header from "./components/Header/Header" */
+ /* import LeafletMap from "./components/Maps/LeafletMap"; */
 
 function App() {
     return (
