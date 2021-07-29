@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import { Map, TileLayer, Marker, Popup, Polyline } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup, Polyline } from 'react-leaflet'
 /* import Routing from "./RoutingMachine"; */
-import Search from "react-leaflet-search";
+/* import Search from "react-leaflet-search"; */
 import axios from "axios";
-/* import L from "leaflet"; */
-
-
+import {icon, markerIcon} from "./obstaculosicon";
+import './LeafletMap.css'
+/* import obsimg from '../../img/obstaculo.svg' */
 
 export default class LeafletMap extends Component {
   state = {
@@ -13,48 +13,59 @@ export default class LeafletMap extends Component {
     lng: 2.1806167492,
     zoom: 80,
     isMapInit: true,
-    coor:[]
+    coor: [],
+    obstaculos: [],
   };
-  saveMap = (map) => {
+  /* saveMap = (map) => {
     this.map = map;
     this.setState({ isMapInit: true });
   };
-  componentDidMount (){
-    
-    axios.get("http://localhost:5000/api/rutas")
-   .then((res) => {
-     console.log(res.data.rutaFinal)
-     const coorArray = res.data.rutaFinal.map((elemento)=>{
-         return elemento.coor
+ */
+  renderMarkers =() =>{
+    return this.state.obstaculos.map((elemento) =>{
+       return <Marker key={elemento} icon={icon} position={elemento}/>     
 
-     })
-     this.setState({coor:coorArray})
+     
+     
+      
+    })
+  }
+  componentDidMount() {
+    axios.get("http://localhost:5000/api/rutas").then((res) => {
+      console.log(res.data.rutaFinal);
+      const coorArray = res.data.rutaFinal.map((elemento) => {
+        return elemento.coor;
+      });
+      this.setState({ coor: coorArray });
+    });
 
-
-
-   } );
-   
- 
-
-}
+    axios.get("http://localhost:5000/api/obstaculos").then((res) => {
+      /* console.log(res); */
+      console.log(res.data.obstaculosFinal);
+      const obstaculosArray = res.data.obstaculosFinal.map((elemento) => {
+        return elemento.coor;
+      });
+      this.setState({ obstaculos: obstaculosArray });
+    });
+  }
 
   render() {
-    const position = [this.state.lat, this.state.lng]; 
-   
+    const position = [this.state.lat, this.state.lng];
+
     return (
-      <Map
+      <MapContainer
         className="mapSize"
         center={position}
         zoom={this.state.zoom}
-        ref={this.saveMap}
+        /* ref={this.saveMap} */
       >
         <TileLayer
           attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
         />
-       {/*  {this.state.isMapInit && <Routing map={this.map} />} */}
+        {/*  {this.state.isMapInit && <Routing map={this.map} />} */}
 
-        <Search
+        {/* <Search
           position="topleft"
           inputPlaceholder="Search your location"
           onChange={(info) => {
@@ -64,16 +75,27 @@ export default class LeafletMap extends Component {
           //zoom={5}
           closeResultsOnClick={true}
           openSearchOnLoad={true}
-        ></Search>
+        ></Search> */}
 
-        <Marker position={position}>
+        <Marker position={position} icon={markerIcon}>
           <Popup>
-           Estamos aquí<br /> Easily customizable.
+            Estamos aquí
+            <br /> Easily customizable.
           </Popup>
         </Marker>
-        {this.state.coor.length !== 0?<Polyline  positions={this.state.coor} />:""}
-        
-      </Map>
+        {this.state.coor.length !== 0 ? (
+          <Polyline positions={this.state.coor} />
+        ) : (
+          ""
+        )}
+         {this.state.obstaculos.length !== 0 ? (
+          this.renderMarkers() 
+        ) : (
+          ""
+        )} 
+        <img src='../../img/obstaculo.svg' alt="" />
+      </MapContainer>
     );
   }
 }
+
