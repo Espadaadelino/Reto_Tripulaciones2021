@@ -42,3 +42,23 @@ border-radius: 14px;
 
    }
 
+   .alice-carousel__stage > li {
+       height: 240px;
+   }
+
+   .alice-carousel__stage  {
+    height: 240px !important;
+}
+
+#root > div > div.Main > div > div:nth-child(4) > div > div > ul > li:nth-child(2) > div > div.MuiCardMedia-root.makeStyles-media-6{
+    padding: 50px
+}
+
+#root > div > div.Main > div > div:nth-child(4) > div > div > ul > li.alice-carousel__stage-item.__active.__target > div > div.MuiCardMedia-root.makeStyles-media-6{
+    padding: 50px
+}
+
+#root > div > div.Main > div > div:nth-child(4) > div > div > ul > li:nth-child(3) > div > div.MuiCardMedia-root.makeStyles-media-6{
+    padding: 50px
+}
+
