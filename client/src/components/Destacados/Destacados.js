@@ -12,11 +12,11 @@ import "./Destacados.css"
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        maxWidth: 345
+        maxWidth: 50
     },
     media: {
-        height: 0,
-        paddingTop: "56.25%" // 16:9
+        height: 20,
+        paddingTop: "8%" // 16:9
     }
 }));
 
@@ -38,8 +38,8 @@ export default function RecipeReviewCard() {
                     image="https://media.timeout.com/images/105737732/image.jpg"/>
                 <CardContent>
                     <Typography variant="body2" color="textSecondary" component="p">
-                        <h2>La Sagrada Familia</h2>
-                        La Sagrada Familia, es una basílica católica de Barcelona (España),diseñada por el arquitecto Antoni Gaudí. Iniciada en 1882. Cuando esté finalizada será la iglesia cristiana más alta del mundo. Es uno de los monumentos más visitados de España, y es la iglesia más visitada de Europa tras la basílica de San Pedro del Vaticano.
+                        <h3>La Sagrada Familia</h3>
+
                     </Typography>
 
                     <AccessibleIcon style={
@@ -66,8 +66,8 @@ export default function RecipeReviewCard() {
                     image="https://v2r8c2i8.stackpathcdn.com/wp-content/uploads/2015/05/praiadebarcelonetaembarcelona.jpg"/>
                 <CardContent>
                     <Typography variant="body2" color="textSecondary" component="p">
-                        <h2>Playa de la Barceloneta</h2>
-                        La playa de la Barceloneta es la más antigua y famosa de las playas de la ciudad de Barcelona (España). Fue remodelada justo antes de los Juegos Olímpicos de 1992.Se encuentra en el barrio de La Barceloneta (Ciutat Vella).
+                        <h3>Playa de la Barceloneta</h3>
+
 
                     </Typography>
 
@@ -95,8 +95,8 @@ export default function RecipeReviewCard() {
                     image="https://upload.wikimedia.org/wikipedia/commons/3/3f/Arc_Triomf_31-10-13.JPG"/>
                 <CardContent>
                     <Typography variant="body2" color="textSecondary" component="p">
-                        <h2>El Arco del Triunfo</h2>
-                        Construido con motivo de la Exposición Universal de 1888, el Arco del Triunfo encabezaba el paseo que conducía hasta la entrada principal de la feria, en el parque de la Ciutadella, que se acababa deinaugurar. El monumento, de ladrillo rojo y de estilo neomudéjar,respondía al gusto por la ornamentación y el eclecticismo.
+                        <h3>El Arco del Triunfo</h3>
+
                     </Typography>
 
                     <AccessibleIcon style={

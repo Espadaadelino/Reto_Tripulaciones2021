@@ -1,6 +1,7 @@
-
-p > h2{
+ h3{
     color: black;
+ 
+    
 }
 
 
@@ -9,5 +10,31 @@ display: block;
 background-size: cover;
 background-repeat: no-repeat;
 background-position: center;
-margin: 25px;
+margin: 10px;
 }
+
+
+#root > div > div.Main > div > div.alice-carousel > div > div > ul{
+height: 800px;
+width: 155px;
+left: 0px;
+top: 0px;
+border-radius: 14px;
+
+   }
+
+
+   #root > div > div.Main > div > div.alice-carousel > div > div > ul > li.alice-carousel__stage-item.__active.__target > div > div.MuiCardMedia-root.makeStyles-media-4{
+       padding: 50px;
+   }
+
+   #root > div > div.Main > div > div.alice-carousel > div > div > ul > li:nth-child(2) > div > div.MuiCardMedia-root.makeStyles-media-4{
+    padding: 50px;
+
+   }
+
+   #root > div > div.Main > div > div.alice-carousel > div > div > ul > li:nth-child(3) > div > div.MuiCardMedia-root.makeStyles-media-4{
+    padding: 50px
+
+   }
+
