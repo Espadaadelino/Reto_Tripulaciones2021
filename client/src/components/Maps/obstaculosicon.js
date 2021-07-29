@@ -2,7 +2,7 @@ import L from 'leaflet';
 /* import img from './obstaculo2.png' */
 const icon = new L.Icon({
     iconUrl: './assets/obstaculo.svg',
-    iconRetinaUrl: './assets7obstaculo.svg',
+    iconRetinaUrl: './assets/obstaculo.svg',
     /* iconAnchor: null,
     popupAnchor: null,
     shadowUrl: null,
