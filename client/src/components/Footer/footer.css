@@ -1,3 +1,4 @@
 .footer{
- padding-top: 151%;
+    position: fixed;
+    bottom: 0;
 }

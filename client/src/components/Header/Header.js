@@ -59,7 +59,6 @@ export default function FloatingActionButtonSize() {
                     Monumentos
                 </Fab>
 
-
                 <Fab variant="extended" color="" aria-label="add"
                     className={
                         classes.margin

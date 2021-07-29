@@ -1,51 +1,36 @@
 import React from 'react';
-/* import {makeStyles} from '@material-ui/core/styles'; */
+import { makeStyles } from '@material-ui/core/styles';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
-import RestoreIcon from '@material-ui/icons/Restore';
-import LocationOnIcon from '@material-ui/icons/LocationOn';
+import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
 import SearchOutlinedIcon from '@material-ui/icons/SearchOutlined';
-import ExploreOutlinedIcon from '@material-ui/icons/ExploreOutlined';
-import {Link} from 'react-router-dom';
-import './footer.css'
+import EditOutlinedIcon from '@material-ui/icons/EditOutlined';
+import PersonIcon from '@material-ui/icons/Person';
+import { Link } from 'react-router-dom';
 
-/* const useStyles = makeStyles({
-    root: {
-        width: 500
-    }
+const useStyles = makeStyles({
+  root: {
+    width: 500,
+  },
 });
- */
-export default function SimpleBottomNavigation() { // const classes = useStyles();
-    const [value, setValue] = React.useState(0);
 
-    return (
-        <div className="footer">
-            <BottomNavigation value={value}
-                onChange={
-                    (event, newValue) => {
-                        setValue(newValue);
-                    }
-                }
-                showLabels
-                //className={classes.root}
-            >
-                <BottomNavigationAction component={Link}
-                    to='/'
-                    label="Home"
-                    icon={<RestoreIcon/>}/>
-                <BottomNavigationAction component={Link}
-                    to='/explora'
-                    label="Explora"
-                    icon={<SearchOutlinedIcon/>}/>
-                <BottomNavigationAction component={Link}
-                    to='/rutas'
-                    label="Ruta"
-                    icon={<ExploreOutlinedIcon/>}/>
-                <BottomNavigationAction component={Link}
-                    to='/actividades'
-                    label="Actividad"
-                    icon={<LocationOnIcon/>}/>
-            </BottomNavigation>
-        </div>
-    );
+export default function SimpleBottomNavigation() {
+  //const classes = useStyles();
+  const [value, setValue] = React.useState(0);
+
+  return (
+    <BottomNavigation
+      value={value}
+      onChange={(event, newValue) => {
+        setValue(newValue);
+      }}
+    showLabels
+    //className={classes.root}
+    >
+      <BottomNavigationAction id="btnHome" component={Link} to='/'  icon={<HomeOutlinedIcon />} />
+      <BottomNavigationAction id="btnExplore" component={Link} to='/explora'  icon={<SearchOutlinedIcon />} />
+      <BottomNavigationAction id="btnRoute" component={Link} to='/rutas' icon={<EditOutlinedIcon />} />
+      <BottomNavigationAction id="btnActivities" component={Link} to='/actividades' icon={<PersonIcon/>} />
+    </BottomNavigation>
+  );
 }

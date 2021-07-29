@@ -8,6 +8,7 @@ import AccessibleIcon from "@material-ui/icons/Accessible";
 import Rating from "@material-ui/lab/Rating";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
+import "./Destacados.css"
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -23,7 +24,7 @@ export default function RecipeReviewCard() {
     const classes = useStyles();
 
     return (
-        <AliceCarousel autoWidth={true}
+        <AliceCarousel autoWidth={false}
             mouseTracking
             disableButtonsControls
             disableDotsControls>
