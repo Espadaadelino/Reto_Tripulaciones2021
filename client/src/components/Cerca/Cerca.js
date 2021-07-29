@@ -8,7 +8,7 @@ import AccessibleIcon from "@material-ui/icons/Accessible";
 import Rating from "@material-ui/lab/Rating";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
-import "./Destacados.css"
+import "./Cerca.css"
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -35,10 +35,10 @@ export default function RecipeReviewCard() {
                 <CardMedia className={
                         classes.media
                     }
-                    image="https://media.timeout.com/images/105737732/image.jpg"/>
+                    image="https://static-resources.mirai.com/wp-content/uploads/sites/1745/20210603081005/esta-Las-Ramblas-de-Barcelona-.jpg"/>
                 <CardContent>
                     <Typography variant="body2" color="textSecondary" component="p">
-                        <h3>La Sagrada Familia</h3>
+                        <h3>Las Ramblas</h3>
 
                     </Typography>
 
@@ -63,10 +63,10 @@ export default function RecipeReviewCard() {
                 <CardMedia className={
                         classes.media
                     }
-                    image="https://v2r8c2i8.stackpathcdn.com/wp-content/uploads/2015/05/praiadebarcelonetaembarcelona.jpg"/>
+                    image="https://lh3.googleusercontent.com/proxy/5de0K0rbvomm-e7SME7cpipFjnzKV9Fi2D-F920SPhQcvr8XV9hpSCdQAra_xG6LmjNKp7bDu9i-EwopwzkAw9vYR7vfA4cmHPpgHUvZQu4h-V2JccgT7cbhspdsVlGJhSl04nczW05KdWYDmuDQKnwaYbOeLlB-"/>
                 <CardContent>
                     <Typography variant="body2" color="textSecondary" component="p">
-                        <h3>Playa de la Barceloneta</h3>
+                        <h3>Parque Güell</h3>
 
 
                     </Typography>
@@ -92,10 +92,10 @@ export default function RecipeReviewCard() {
                 <CardMedia className={
                         classes.media
                     }
-                    image="https://upload.wikimedia.org/wikipedia/commons/3/3f/Arc_Triomf_31-10-13.JPG"/>
+                    image="https://i2.bssl.es/bcnhoy/2010/09/boqueria2.jpg"/>
                 <CardContent>
                     <Typography variant="body2" color="textSecondary" component="p">
-                        <h3>El Arco del Triunfo</h3>
+                        <h3>Mercado de la Boquería</h3>
 
                     </Typography>
 

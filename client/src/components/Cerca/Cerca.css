@@ -1,4 +1,4 @@
- h3{
+h3{
     color: black;
  
     
@@ -10,7 +10,7 @@ display: block;
 background-size: cover;
 background-repeat: no-repeat;
 background-position: center;
-margin: 300px;
+margin: 10px;
 }
 
 
@@ -34,37 +34,10 @@ border-radius: 14px;
 
    #root > div > div.Main > div > div.alice-carousel > div > div > ul > li:nth-child(2) > div > div.MuiCardMedia-root.makeStyles-media-4{
     padding: 50px;
-    border-radius: 14px;
 
    }
 
    #root > div > div.Main > div > div.alice-carousel > div > div > ul > li:nth-child(3) > div > div.MuiCardMedia-root.makeStyles-media-4{
-    padding: 50px;
-    border-radius: 14px;
-    
+    padding: 50px
 
    }
-
-   .alice-carousel__stage > li {
-       height: 240px;
-   }
-
-   .alice-carousel__stage  {
-    height: 240px !important;
-}
-
-#root > div > div.Main > div > div:nth-child(4) > div > div > ul > li:nth-child(2) > div > div.MuiCardMedia-root.makeStyles-media-6{
-    padding: 50px;
-    border-radius: 14px;
-}
-
-#root > div > div.Main > div > div:nth-child(4) > div > div > ul > li.alice-carousel__stage-item.__active.__target > div > div.MuiCardMedia-root.makeStyles-media-6{
-    padding: 50px;
-    border-radius: 14px;
-}
-
-#root > div > div.Main > div > div:nth-child(4) > div > div > ul > li:nth-child(3) > div > div.MuiCardMedia-root.makeStyles-media-6{
-    padding: 50px;
-    border-radius: 14px;
-}
-

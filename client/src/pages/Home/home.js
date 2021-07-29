@@ -1,24 +1,24 @@
 import React from 'react';
 import Header from '../../components/Header/Header';
 import Destacados from '../../components/Destacados/Destacados';
+import Cerca from '../../components/Cerca/Cerca'
 import './home.css'
 
 
-function home() {
+function Home() {
     return (
-        <div>
+        <div className="Home">
             <div>
-
-                <h5>Descrubre</h5>
+                <h5>Descubre</h5>
                 <h2>Barcelona</h2>
-
             </div>
             <Header/>
             <Destacados/>
+            <Cerca/>
 
 
         </div>
     )
 }
 
-export default home
+export default Home

@@ -12,7 +12,7 @@ import './Header.css'
 
 const useStyles = makeStyles((theme) => ({
     margin: {
-        margin: theme.spacing(12)
+        margin: theme.spacing(1)
     },
     extendedIcon: {
         marginRight: theme.spacing(1)
@@ -29,8 +29,6 @@ export default function FloatingActionButtonSize() {
 
             <AliceCarousel disableDotsControls disableButtonsControls
                 autoWidth={true}>
-
-
                 <Fab variant="extended" color="" aria-label="add"
                     className={
                         classes.margin
