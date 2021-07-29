@@ -4,21 +4,17 @@ import Destacados from '../../components/Destacados/Destacados';
 import './home.css'
 
 
-function home() {
+function Home() {
     return (
-        <div>
+        <div className="Home">
             <div>
-
-                <h5>Descrubre</h5>
+                <h5>Descubre</h5>
                 <h2>Barcelona</h2>
-
             </div>
             <Header/>
             <Destacados/>
-
-
         </div>
     )
 }
 
-export default home
+export default Home

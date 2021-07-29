@@ -24,23 +24,25 @@ export default function RecipeReviewCard() {
     const classes = useStyles();
 
     return (
-        <AliceCarousel autoWidth={false}
-            mouseTracking
-            disableButtonsControls
-            disableDotsControls>
-            <Card>
-                <CardMedia className={
-                        classes.media
-                    }
-                    image="https://media.timeout.com/images/105737732/image.jpg"/>
-                <CardContent>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                        <h2>La Sagrada Familia</h2>
-                        La Sagrada Familia, es una basílica católica de Barcelona (España),
-                                    diseñada por el arquitecto Antoni Gaudí. Iniciada en 1882, todavía
-                                    está en construcción.
-                    </Typography>
-                    <div>
+        <div class="carousel">
+
+            <AliceCarousel autoWidth={true}
+                mouseTracking
+                disableButtonsControls
+                disableDotsControls>
+                <Card>
+                    <CardMedia className={
+                            classes.media
+                        }
+                        image="https://media.timeout.com/images/105737732/image.jpg"/>
+                    <CardContent>
+                        <Typography variant="body2" color="textSecondary" component="p">
+                            <h2>La Sagrada Familia</h2>
+                            La Sagrada Familia, es una basílica católica de Barcelona (España),
+                                                                                                                                                                                                                                                                                                                                                                            diseñada por el arquitecto Antoni Gaudí. Iniciada en 1882, todavía
+                                                                                                                                                                                                                                                                                                                                                                            está en construcción.
+                        </Typography>
+
                         <AccessibleIcon style={
                             {
                                 fontSize: 15,
@@ -53,25 +55,25 @@ export default function RecipeReviewCard() {
                                 color: "blue"
                             }
                         }/>
-                    </div>
-                </CardContent>
-            </Card>
-            <Card>
-                <CardMedia className={
-                        classes.media
-                    }
-                    image="https://v2r8c2i8.stackpathcdn.com/wp-content/uploads/2015/05/praiadebarcelonetaembarcelona.jpg"/>
-                <CardContent>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                        <h2>Playa de la Barceloneta</h2>
-                        Se encuentra en el barrio de La Barceloneta (Ciutat Vella). Junto
-                                    con la barcelonesa playa de San Sebastián y la playa de la Victoria,
-                                    es una de las más largas con una longitud de 1100 metros. Junto con
-                                    la de San Sebastián (playa cercana) es una de las más antiguas y de
-                                    mayor tradición de la ciudad y también una de las preferidas por los
-                                    usuarios extranjeros.
-                    </Typography>
-                    <div>
+
+                    </CardContent>
+                </Card>
+                <Card>
+                    <CardMedia className={
+                            classes.media
+                        }
+                        image="https://v2r8c2i8.stackpathcdn.com/wp-content/uploads/2015/05/praiadebarcelonetaembarcelona.jpg"/>
+                    <CardContent>
+                        <Typography variant="body2" color="textSecondary" component="p">
+                            <h2>Playa de la Barceloneta</h2>
+                            Se encuentra en el barrio de La Barceloneta (Ciutat Vella). Junto
+                                                                                                                                                                                                                                                                                                                                                                            con la barcelonesa playa de San Sebastián y la playa de la Victoria,
+                                                                                                                                                                                                                                                                                                                                                                            es una de las más largas con una longitud de 1100 metros. Junto con
+                                                                                                                                                                                                                                                                                                                                                                            la de San Sebastián (playa cercana) es una de las más antiguas y de
+                                                                                                                                                                                                                                                                                                                                                                            mayor tradición de la ciudad y también una de las preferidas por los
+                                                                                                                                                                                                                                                                                                                                                                            usuarios extranjeros.
+                        </Typography>
+
                         <AccessibleIcon style={
                             {
                                 fontSize: 15,
@@ -84,25 +86,25 @@ export default function RecipeReviewCard() {
                                 color: "blue"
                             }
                         }/>
-                    </div>
-                </CardContent>
-            </Card>
-            <Card>
-                <CardMedia className={
-                        classes.media
-                    }
-                    image="https://upload.wikimedia.org/wikipedia/commons/3/3f/Arc_Triomf_31-10-13.JPG"/>
-                <CardContent>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                        <h2>El Arco del Triunfo</h2>
-                        Construido con motivo de la Exposición Universal de 1888, el Arco de
-                                    Triunfo encabezaba el paseo que conducía hasta la entrada principal
-                                    de la feria, en el parque de la Ciutadella, que se acababa de
-                                    inaugurar. El monumento, de ladrillo rojo y de estilo neomudéjar,
-                                    respondía al gusto por la ornamentación y el eclecticismo tan
-                                    característico del modernismo catalán, en auge en aquellos años.
-                    </Typography>
-                    <div>
+
+                    </CardContent>
+                </Card>
+                <Card>
+                    <CardMedia className={
+                            classes.media
+                        }
+                        image="https://upload.wikimedia.org/wikipedia/commons/3/3f/Arc_Triomf_31-10-13.JPG"/>
+                    <CardContent>
+                        <Typography variant="body2" color="textSecondary" component="p">
+                            <h2>El Arco del Triunfo</h2>
+                            Construido con motivo de la Exposición Universal de 1888, el Arco de
+                                                                                                                                                                                                                                                                                                                                                                            Triunfo encabezaba el paseo que conducía hasta la entrada principal
+                                                                                                                                                                                                                                                                                                                                                                            de la feria, en el parque de la Ciutadella, que se acababa de
+                                                                                                                                                                                                                                                                                                                                                                            inaugurar. El monumento, de ladrillo rojo y de estilo neomudéjar,
+                                                                                                                                                                                                                                                                                                                                                                            respondía al gusto por la ornamentación y el eclecticismo tan
+                                                                                                                                                                                                                                                                                                                                                                            característico del modernismo catalán, en auge en aquellos años.
+                        </Typography>
+
                         <AccessibleIcon style={
                             {
                                 fontSize: 15,
@@ -115,9 +117,11 @@ export default function RecipeReviewCard() {
                                 color: "blue"
                             }
                         }/>
-                    </div>
-                </CardContent>
-            </Card>
-        </AliceCarousel>
+
+                    </CardContent>
+                </Card>
+            </AliceCarousel>
+        </div>
+
     );
 }

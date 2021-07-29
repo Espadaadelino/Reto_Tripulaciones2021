@@ -10,7 +10,6 @@ const Main = () => {
 
     return (
         <div className='Main'>
-            {/* <div className="wrapper"> */}
             <Switch>
                 <Route path="/"
                     component={Home}
@@ -22,7 +21,7 @@ const Main = () => {
                 <Route path="/actividades"
                     component={Actividades}/>
             </Switch>
-            {/* </div> */} </div>
+        </div>
     )
 }
 

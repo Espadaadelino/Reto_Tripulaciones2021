@@ -4,7 +4,8 @@ import {BrowserRouter} from 'react-router-dom'
 import Main from './components/Main/Main'
 import Footer from "./components/Footer/footer"
 /* import Header from "./components/Header/Header" */
- /* import LeafletMap from "./components/Maps/LeafletMap"; */
+/* import LeafletMap from "./components/Maps/LeafletMap"; */
+import './App.css'
 
 function App() {
     return (
