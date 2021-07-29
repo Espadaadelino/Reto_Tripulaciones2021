@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../../components/Header/Header';
 import Destacados from '../../components/Destacados/Destacados';
+import Cerca from '../../components/Cerca/Cerca'
 import './home.css'
 
 
@@ -13,6 +14,9 @@ function Home() {
             </div>
             <Header/>
             <Destacados/>
+            <Cerca/>
+
+
         </div>
     )
 }
